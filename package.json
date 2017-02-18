@@ -16,10 +16,11 @@
     "lint:fix": "standard --fix",
     "build": "cross-env NODE_ENV=production webpack --progress --config webpack/prod.config -p",
     "storybook": "start-storybook -p 6006 -c storybook",
-    "build-storybook": "cross-env NODE_ENV=production build-storybook -c storybook",
+    "build-storybook": "cross-env NODE_ENV=production build-storybook -c storybook -o docs",
     "update-packages": "node scripts/update.js"
   },
   "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.35.3",
     "babel-core": "^6.22.1",
     "babel-jest": "^18.0.0",
@@ -47,6 +48,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.22.0",
+    "milligram": "^1.3.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   }
